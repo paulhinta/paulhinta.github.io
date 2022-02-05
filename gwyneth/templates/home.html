@@ -1,15 +1,15 @@
+{% extends "base.html" %} {% block content %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Live video stream </title>
+    <title>Live video stream</title>
   </head>
   <body>
-  <center>
-    <h1> Live Video Stream </h1>
-    <img src = "{% url 'video_stream' %}">
-  </center>
+    <center>
+      <h1>Live Video Stream</h1>
+      <img src="{% url 'video_stream' %}" />
+    </center>
+    <!--<img src="goopboss.jpg" class="img-fluid" alt="Responsive image" />-->
   </body>
 </html>
-{% extends "base.html" %} {% block content %}
-<img src="assets/goopboss.jpg" class="img-fluid" alt="Responsive image" />
 {% endblock content %}
