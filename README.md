@@ -12,5 +12,12 @@ Simple MVP:
 
 Library for camera enabling on website: https://www.npmjs.com/package/jslib-html5-camera-photo
 
+Run the program locally:
 
+1. Clone repository
+2. Windows:
 
+Mac/Linux:
+```
+./venv\Scripts\activate
+```
