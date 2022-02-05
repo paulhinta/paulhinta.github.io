@@ -32,3 +32,6 @@ cd gwyneth
 ```
 python manage.py runserver
 ```
+
+## Installations
+1. ```pip install opencv-python````
