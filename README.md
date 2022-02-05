@@ -15,9 +15,20 @@ Library for camera enabling on website: https://www.npmjs.com/package/jslib-html
 Run the program locally:
 
 1. Clone repository
-2. Windows:
-
-Mac/Linux:
+2. Activate the virtual environment inside the root directory.
+Windows:
 ```
 ./venv\Scripts\activate
+```
+Mac/Linux:
+```
+source venv/Scripts/activate
+```
+3. Cd into the _gwyneth_ directory:
+```
+cd gwyneth
+```
+4. Run the Django application:
+```
+python manage.py runserver
 ```
