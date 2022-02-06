@@ -2,9 +2,10 @@
 [U of T Hacks IX](https://uofthacks-ix.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
 
 ## Ideas:
-1. Computer vision with filter
-
 Simple MVP:
+1. Facial recognition with Gwyneth Paltrow as a mask/filter.
+
+Future opportunities:
 1. Input image
 2. Cut face and cutout static background (dress like your grandpa) 
 3. Soldier -> Face cutout, what you would look like
