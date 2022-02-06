@@ -1,6 +1,6 @@
 # Restoration
 The app is live! [Try it out](https://tranquil-beach-84474.herokuapp.com/)
-Submitted to U of T Hacks IX. Check out the devpost [here](https://uofthacks-ix.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
+Submitted to U of T Hacks IX. Check out the devpost [here](https://devpost.com/software/imane-is-cool)
 
 ## Ideas:
 Simple MVP:
