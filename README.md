@@ -34,17 +34,17 @@ python manage.py runserver
 ```
 
 ## Installations
-1. ```
-pip install opencv-python
-pip install django
-pip install pip install opencv-python
-brew install boost
-brew install boost-python
-brew install dlib
-pip3 install numpy
-pip3 install scipy
-pip3 install scikit-image
-pip3 install dlib
+```
+  pip install opencv-python
+  pip install django
+  pip install pip install opencv-python
+  brew install boost
+  brew install boost-python
+  brew install dlib
+  pip3 install numpy
+  pip3 install scipy
+  pip3 install scikit-image
+  pip3 install dlib
 ````
 
-3. 
+
