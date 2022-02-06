@@ -28,11 +28,11 @@ let selected = -1; // Default no filter
 function preload()
 {
   // Spiderman Mask Filter asset
-  imgSpidermanMask = loadImage("https://i.ibb.co/nR6Y1yS/662b150b9462095b6f78d3f99a8aba2244-4-gwynethpaltrow-rvertical-w1200-removebg-preview.png");
+  imgSpidermanMask = loadImage("https://i.ibb.co/mtfxdtV/6a00d8341c630a53ef0134892f8411970c-500wi-removebg-preview-3.png");
 
   // Dog Face Filter assets
-  imgDogEarRight = loadImage("https://i.ibb.co/xJC95WJ/662b150b9462095b6f78d3f99a8aba2244-4-gwynethpaltrow-rvertical-w1200-removebg-preview-1.png");
-  imgDogEarLeft = loadImage("https://i.ibb.co/HXFph71/662b150b9462095b6f78d3f99a8aba2244-4-gwynethpaltrow-rvertical-w1200-removebg-preview.png");
+  imgDogEarRight = loadImage("https://i.ibb.co/bFJf33z/dog-ear-right.png");
+  imgDogEarLeft = loadImage("https://i.ibb.co/dggwZ1q/dog-ear-left.png");
   imgDogNose = loadImage("https://i.ibb.co/PWYGkw1/dog-nose.png");
 }
 
@@ -99,7 +99,7 @@ function drawSpidermanMask()
   {
     push();
     const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.2; // The width is given by the face width, based on the geometry
-    const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 1.2; // The height is given by the distance from nose to chin, times 2
+    const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 2; // The height is given by the distance from nose to chin, times 2
     translate(-wx/2, -wy/2);
     image(imgSpidermanMask, positions[62][0], positions[62][1], wx, wy); // Show the mask at the center of the face
     pop();
