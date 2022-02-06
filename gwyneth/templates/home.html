@@ -69,6 +69,12 @@ function preload()
   // Spiderman Mask Filter asset
   imgSpidermanMask = loadImage("https://i.ibb.co/mtfxdtV/6a00d8341c630a53ef0134892f8411970c-500wi-removebg-preview-3.png");
 
+   // Pokemon Mask Filter asset
+  imgPokemonMask = loadImage("https://iili.io/031tQp.png");
+
+  // Pink Mask Filter asset
+  imgPinkMask = loadImage("https://iili.io/03V93P.png");
+
   // Dog Face Filter assets
   imgDogEarRight = loadImage("https://i.ibb.co/bFJf33z/dog-ear-right.png");
   imgDogEarLeft = loadImage("https://i.ibb.co/dggwZ1q/dog-ear-left.png");
@@ -96,7 +102,7 @@ function setup()
 
   // select filter
   const sel = createSelect();
-  const selectList = ['Be Gwyneth Mask', 'Dog Filter']; // list of filters
+  const selectList = ['Be Gwyneth Mask', 'Dog Filter', 'Pokemon', 'Pink Filter']; // list of filters
   sel.option('Select Filter', -1); // Default no filter
   for (let i = 0; i < selectList.length; i++)
   {
@@ -129,11 +135,43 @@ function draw()
     case '-1': break;
     case '0': drawSpidermanMask(); break;
     case '1': drawDogFace(); break;
+    case '2': drawPokemon(); break;
+    case '3': drawPink(); break;
   }
 }
 
-// Spiderman Mask Filter
+// Mask Filter
 function drawSpidermanMask()
+{
+  const positions = faceTracker.getCurrentPosition();
+  if (positions !== false)
+  {
+    push();
+    const wx = Math.abs(positions[13][0] - positions[1][0]) * 2; // The width is given by the face width, based on the geometry
+    const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 2.5; // The height is given by the distance from nose to chin, times 2
+    translate(-wx/2, -wy/2);
+    image(imgSpidermanMask, positions[62][0], positions[62][1], wx, wy); // Show the mask at the center of the face
+    pop();
+  }
+}
+
+// Mask Filter
+function drawPokemon()
+{
+  const positions = faceTracker.getCurrentPosition();
+  if (positions !== false)
+  {
+    push();
+    const wx = Math.abs(positions[13][0] - positions[1][0]) * 2; // The width is given by the face width, based on the geometry
+    const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 2; // The height is given by the distance from nose to chin, times 2
+    translate(-wx/2, -wy/2);
+    image(imgPokemonMask, positions[62][0], positions[62][1], wx, wy); // Show the mask at the center of the face
+    pop();
+  }
+}
+
+// Pink Filter
+function drawPink()
 {
   const positions = faceTracker.getCurrentPosition();
   if (positions !== false)
@@ -142,7 +180,7 @@ function drawSpidermanMask()
     const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.2; // The width is given by the face width, based on the geometry
     const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 2; // The height is given by the distance from nose to chin, times 2
     translate(-wx/2, -wy/2);
-    image(imgSpidermanMask, positions[62][0], positions[62][1], wx, wy); // Show the mask at the center of the face
+    image(imgPinkMask, positions[62][0], positions[70][1], wx, wy); // Show the mask at the center of the face
     pop();
   }
 }
