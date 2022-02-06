@@ -2,7 +2,7 @@ from gc import collect
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from utils import get_db_handle
+#from utils import get_db_handle
 
 from django.shortcuts import render
 from django.http.response import StreamingHttpResponse
@@ -18,10 +18,10 @@ def video_stream(request):
     return StreamingHttpResponse(gen(VideoCamera()),
                     content_type='multipart/x-mixed-replace; boundary=frame')
 '''
-db = get_db_handle()
+#db = get_db_handle()
 
 def index(request):
-    x = db.find({"listing_url":"https://www.airbnb.com/rooms/10006546"})
+    #x = db.find({"listing_url":"https://www.airbnb.com/rooms/10006546"})
     
     context = {}
     #context['query'] = str(x[0])
