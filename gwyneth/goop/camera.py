@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 class VideoCamera(object):
     def __init__(self):
