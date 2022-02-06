@@ -1,1 +1,1 @@
-web: gunicorn gwyneth.wsgi
+web: gunicorn --pythonpath gwyneth gwyneth.wsgi --log-file
