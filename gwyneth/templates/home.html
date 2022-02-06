@@ -1,33 +1,46 @@
 {% extends "base.html" %} {% block content %}
 <style>
- img.frame {
-  border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch; 
-  border-color: #f4be52;
-  border-style: inset;
-  border-width: 60px;
-  display: block;
-  width: 70%;
-  height: auto;
-  background-color: #ffe;
-  margin: 0 auto;
-}
-@media all and (max-width: 500px) {
-  img.frame { 
-    border-width: 0px;
-    width: 100%; }
-}
+  #frame {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: solid 15px #555;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: -3px -3px 12px #999;
+  }
+  #border {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: solid 20px white;
+    box-shadow: -3px -3px 12px #999;
+  }
+  img {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-top: solid 1px #aaa;
+    border-left: solid 1px #aaa;
+    border-bottom: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+  }
 </style>
-<!DOCTYPE html>
 <html>
   <head>
-    <title> The Goop Cam </title>
+    <title>The Goop Cam</title>
   </head>
   <body>
-  <center>
-    <h1> The Goop Cam </h1>
-  
-    <img class="frame" src = "{% url 'video_stream' %}" width="70%" height="90%">
-    </center>
+    <h1>The Goop Cam</h1>
   </body>
+  <div id="frame">
+    <div id="border">
+      <img src="{% url 'video_stream' %}" alt="Drawing" />
+    </div>
+    <!-- #border -->
+  </div>
+  <!-- #frame -->
 </html>
 {% endblock content %}
