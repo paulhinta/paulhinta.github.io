@@ -6,6 +6,7 @@ from utils import get_db_handle
 
 from django.shortcuts import render
 from django.http.response import StreamingHttpResponse
+'''
 from goop.camera import VideoCamera
 # Create your views here.
 def gen(camera):
@@ -16,7 +17,7 @@ def gen(camera):
 def video_stream(request):
     return StreamingHttpResponse(gen(VideoCamera()),
                     content_type='multipart/x-mixed-replace; boundary=frame')
-
+'''
 db = get_db_handle()
 
 def index(request):

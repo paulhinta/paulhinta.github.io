@@ -1,3 +1,4 @@
+'''
 import cv2
 
 class VideoCamera(object):
@@ -10,3 +11,4 @@ class VideoCamera(object):
         frame_flip = cv2.flip(frame, 1)
         ret, frame = cv2.imencode('.jpg', frame_flip) ##Video rect and frame 
         return frame.tobytes()
+'''
