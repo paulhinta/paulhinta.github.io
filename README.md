@@ -1,5 +1,6 @@
 # Restoration
-[U of T Hacks IX](https://uofthacks-ix.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
+The app is live! [Try it out](https://tranquil-beach-84474.herokuapp.com/)
+Submitted to U of T Hacks IX. Check out the devpost [here](https://uofthacks-ix.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
 
 ## Ideas:
 Simple MVP:
