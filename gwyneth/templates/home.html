@@ -1,17 +1,56 @@
 {% extends "base.html" %} {% block content %}
+
+<style>
+  html, body {
+  height: 100%;
+}
+
+canvas {
+  border-radius: 12px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: solid 15px #555;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: -3px -3px 12px #999;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+select {
+  border-radius: 12px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: solid 15px #555;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: -3px -3px 12px #999;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+</style>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Face Filter</title>
   </head>
-
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+<body>
+    <h1>The Goop Cam</h1>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clmtrackr@1.1.2/build/clmtrackr.min.js"></script>
+  <!-- #frame -->
 </html>
+<br>
 <script>
-  let outputWidth;
+
+let outputWidth;
 let outputHeight;
 
 let faceTracker; // Face Tracking
@@ -46,7 +85,9 @@ function setup()
   outputWidth = maxWidth;
   outputHeight = maxWidth * 0.75; // 4:3
 
-  createCanvas(outputWidth, outputHeight);
+  var canvas = createCanvas(outputWidth, outputHeight);
+
+  canvas.style.border = "1px solid";
 
   // webcam capture
   videoInput = createCapture(VIDEO);
